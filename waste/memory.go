@@ -4,6 +4,8 @@ import "math/rand"
 
 var PartialBuffers []*PartialObject
 
+var Buffers []*GiBObject
+
 const (
 	KiB = 1024
 	MiB = 1024 * KiB
@@ -12,6 +14,10 @@ const (
 
 type PartialObject struct {
 	Data []byte
+}
+
+type GiBObject struct {
+	B [GiB]byte
 }
 
 func Memory(mib int) {
