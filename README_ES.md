@@ -7,11 +7,30 @@
   </picture>
  </p>
 
-# Lunar NeverIdle
+# 🌙 Lunar NeverIdle
 
 **Español** | [**English**](README.md) | [**简体中文**](README_CN.md)
 
 *Te quiero, pero ¿podrías no detener mi máquina?*
+
+---
+
+Hola, soy @jennisu y esto es **Lunar NeverIdle**.
+
+**Lunar NeverIdle** es un *fork* de [NeverIdle](https://github.com/layou233/NeverIdle), creado por @layou233.
+
+**Lunar NeverIdle** se ejecuta en segundo plano y genera el uso de recursos necesario para evitar que las instancias de **OCI Free Tier** sean eliminadas.  
+Durante varios años utilicé **NeverIdle**, y mi instancia nunca fue eliminada. Sin embargo, con el tiempo me di cuenta de dos problemas:
+
+- Alto consumo de RAM desde el inicio, ya que no era posible ajustar el uso de memoria a menos de 1 GiB.  
+- Con el tiempo, el uso de memoria aumentaba debido a que los bloques no se limpiaban y se acumulaban progresivamente.
+
+Así nació **Lunar NeverIdle**, con la idea de resolver estos problemas. Se diferencia del original en que:
+
+- El uso de memoria puede especificarse en **MiB**, lo que permite una mayor flexibilidad en la asignación de recursos.  
+- Limpia los bloques de memoria periódicamente, evitando que el consumo se acumule y manteniendo estable el uso de RAM con el tiempo.
+
+Espero que **Lunar NeverIdle** sea tan útil para quienes lo usen como lo ha sido para mí.
 
 ---
 

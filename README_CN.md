@@ -7,13 +7,34 @@
   </picture>
  </p>
 
-# Lunar NeverIdle
+# 🌙 Lunar NeverIdle
 
 [**Español**](README_ES.md) | [**English**](README.md) | **简体中文**
 
 *我喜欢你，但别删我机，好么？*
 
 本程序随手写的，下面介绍也是随心写的，不喜勿碰。
+
+---
+
+大家好，我是 @jennisu，这里是 **Lunar NeverIdle**。
+
+**Lunar NeverIdle** 是由 @layou233 创建的 [NeverIdle](https://github.com/layou233/NeverIdle) 的一个分支（fork）。
+
+**Lunar NeverIdle** 在后台运行，用于生成必要的资源使用量，以防止 **OCI Free Tier** 实例被删除。  
+我使用 **NeverIdle** 已经好几年了，在此期间我的实例从未被删除。但随着时间推移，我意识到存在两个问题：
+
+- 从启动开始就占用较高的 RAM，因为无法将内存使用量调整到低于 1 GiB。  
+- 随着时间的推移，内存使用量会逐渐增加，因为内存块未被清理而不断累积。
+
+因此，**Lunar NeverIdle** 诞生了，用来解决这些问题。它与原始版本的区别在于：
+
+- 可以以 **MiB** 为单位指定内存使用量，从而在资源分配上具有更大的灵活性。  
+- 它会定期清理内存块，使资源使用保持恒定，防止 RAM 使用量随时间增长。
+
+希望 **Lunar NeverIdle** 对其他使用者来说，也能像对我一样有帮助。
+
+---
 
 ## 一键脚本 One click to go
 
