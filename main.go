@@ -16,7 +16,7 @@ const Version = "0.1"
 var (
 	FlagCPUPercent             = flag.Float64("cp", 0, "Percent of CPU waste")
 	FlagCPU                    = flag.Duration("c", 0, "Interval for CPU waste")
-	FlagMemory                 = flag.Int("m", 0, "GiB of memory waste")
+	FlagMemory                 = flag.Int("m", 0, "MiB of memory waste")
 	FlagNetwork                = flag.Duration("n", 0, "Interval for network speed test")
 	FlagNetworkConnectionCount = flag.Int("t", 10, "Set concurrent connections for network speed test")
 	FlagPriority               = flag.Int("p", 666, "Set process priority value")
@@ -45,7 +45,7 @@ func main() {
 	if *FlagMemory != 0 {
 		nothingEnabled = false
 		fmt.Println("====================")
-		fmt.Println("Starting memory wasting of", *FlagMemory, "GiB")
+		fmt.Println("Starting memory wasting of", *FlagMemory, "MiB")
 		go waste.Memory(*FlagMemory)
 		runtime.Gosched()
 		fmt.Println("====================")
