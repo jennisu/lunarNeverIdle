@@ -1,4 +1,4 @@
-module github.com/layou233/neveridle
+module github.com/jennisu/lunarneveridle
 
 go 1.24.0
 

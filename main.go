@@ -7,11 +7,11 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/layou233/neveridle/controller"
-	"github.com/layou233/neveridle/waste"
+	"github.com/jennisu/lunarneveridle/controller"
+	"github.com/jennisu/lunarneveridle/waste"
 )
 
-const Version = "0.2.3"
+const Version = "0.1"
 
 var (
 	FlagCPUPercent             = flag.Float64("cp", 0, "Percent of CPU waste")
@@ -24,9 +24,10 @@ var (
 
 func main() {
 	rand.Seed(time.Now().UnixNano())
-	fmt.Println("NeverIdle", Version, "- Getting worse from here.")
+	fmt.Println("")
+	fmt.Println("Lunar NeverIdle", Version, "- Getting worse from here.")
 	fmt.Println("Platform:", runtime.GOOS, ",", runtime.GOARCH, ",", runtime.Version())
-	fmt.Println("GitHub: https://github.com/layou233/NeverIdle")
+	fmt.Println("GitHub: https://jennisu.com/jennisu/lunarNeverIdle")
 
 	flag.Parse()
 	nothingEnabled := true

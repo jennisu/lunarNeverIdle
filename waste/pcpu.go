@@ -6,7 +6,7 @@ import (
 	"runtime"
 	"time"
 
-	"github.com/layou233/neveridle/controller"
+	"github.com/jennisu/lunarneveridle/controller"
 
 	"github.com/shirou/gopsutil/v3/cpu"
 	"go.einride.tech/pid"
