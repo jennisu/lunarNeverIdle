@@ -52,3 +52,22 @@ For Windows, see [the official documentation](https://learn.microsoft.com/en-us/
 It is recommended not to specify because the default is the lowest priority, making way for all other processes.
 
 *All the functions you configured will be executed once immediately when you start the program, so you can take a look at the effect.*
+
+## Docker - Deployment
+1. Download `Dockerfile`
+```shell
+wget https://raw.githubusercontent.com/jennisu/lunarNeverIdle/master/Dockerfile
+```
+2. Build the image
+```shell
+# ARM Machine
+docker build -t lunarneveridle:latest .
+# AMD machine specifications ARCH=amd64
+docker build --build-arg ARCH=amd64 -t lunarneveridle:latest .
+```
+3. Execute
+```bash
+# Parameters are the same as above
+docker run -d --name lunarneveridle lunarneveridle:latest -c 1h -m 2 -n 4h
+```
+

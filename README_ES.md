@@ -52,3 +52,21 @@ Para Windows, consulta [la documentación oficial](https://learn.microsoft.com/e
 Se recomienda no especificar un valor, ya que el valor predeterminado es la prioridad más baja, lo que permitirá que todos los demás procesos tengan prioridad.
 
 *Todas las funciones que hayas configurado se ejecutarán inmediatamente una vez que inicies el programa, para que puedas ver el efecto.*
+
+## Docker - Implementación
+1. Descarga `Dockerfile`
+```shell
+wget https://raw.githubusercontent.com/jennisu/lunarNeverIdle/master/Dockerfile
+```
+2. Contruye la imagen
+```shell
+# Máquina ARM
+docker build -t lunarneveridle:latest .
+# Especificaciones de máquina AMD ARCH=amd64
+docker build --build-arg ARCH=amd64 -t lunarneveridle:latest .
+```
+3. Ejecuta
+```bash
+# Los parámetros de comando son iguales a los de arriba
+docker run -d --name lunarneveridle lunarneveridle:latest -c 1h -m 2 -n 4h
+```
