@@ -11,7 +11,7 @@ import (
 	"github.com/jennisu/lunarneveridle/waste"
 )
 
-const Version = "0.1"
+const Version = "1.0.0"
 
 var (
 	FlagCPUPercent             = flag.Float64("cp", 0, "Percent of CPU waste")
